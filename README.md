@@ -51,7 +51,12 @@ Configure your GPS tk102-2 unit to use GPRS instead of SMS, send the following c
 * gprs123456
 
 Configure your GPS tk102-2 unit to send its ubication every X minutes indefinitly, send an SMS:
-* t010m***n123456 (every 10 minutes)
+* t010m***n123456 (every 10 minutes in this example)
 
 In case you want to stop your device sending ubication updates, send an SMS:
 * notn123456
+
+Run the server
+```
+python gps.py
+```
