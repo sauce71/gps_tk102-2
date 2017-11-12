@@ -1,6 +1,6 @@
-import threading
 import datetime
 import socket
+import threading
 
 
 class ConnProcessor(threading.Thread):
@@ -16,8 +16,7 @@ class ConnProcessor(threading.Thread):
 
     def run(self):
         print(">>>Connection from {}:{}".format(self.addr[0], self.addr[1]), flush=True)
-        # original was 120
-        self.client.settimeout(180)
+        self.client.settimeout(120)
 
         while True:
             if self.should_terminate:
